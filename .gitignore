@@ -27,3 +27,5 @@ pnpm-debug.log*
 # deploy
 deploy.sh
 deploy.yml
+
+.github
