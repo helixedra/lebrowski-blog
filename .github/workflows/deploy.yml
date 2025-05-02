@@ -18,11 +18,11 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -H 92.112.180.154 >> ~/.ssh/known_hosts
+          echo "${{ secrets.VPS_HOST_KEY }}" >> ~/.ssh/known_hosts
 
       - name: Trigger deploy script on VPS
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
         run: |
           chmod 600 ~/.ssh/id_ed25519
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_ed25519 deployer@92.112.180.154 "/var/www/lebrowski.blog/deploy.sh"
+          ssh -i ~/.ssh/id_ed25519 deployer@${{ secrets.VPS_IP }} ${{ secrets.VPS_SCRIPT_PATH }}"
