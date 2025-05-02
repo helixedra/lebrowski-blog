@@ -24,8 +24,3 @@ pnpm-debug.log*
 .idea/
 
 
-# deploy
-deploy.sh
-deploy.yml
-
-.github

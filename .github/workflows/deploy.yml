@@ -1,0 +1,24 @@
+name: Deploy Astro to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H 92.112.180.154 >> ~/.ssh/known_hosts
+
+      - name: Trigger deploy script on VPS
+        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_ed25519 root@92.112.180.154 "/var/www/lebrowski.blog/deploy.sh"
