@@ -25,4 +25,4 @@ jobs:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
         run: |
           chmod 600 ~/.ssh/id_ed25519
-          ssh -i ~/.ssh/id_ed25519 deployer@${{ secrets.VPS_IP }} "${{ secrets.VPS_SCRIPT_PATH }}"
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_ed25519 deployer@${{ secrets.VPS_IP }} "${{ secrets.VPS_SCRIPT_PATH }}"
