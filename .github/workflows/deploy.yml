@@ -21,4 +21,8 @@ jobs:
           ssh-keyscan -H 92.112.180.154 >> ~/.ssh/known_hosts
 
       - name: Trigger deploy script on VPS
-        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_ed25519 root@92.112.180.154 "/var/www/lebrowski.blog/deploy.sh"
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        run: |
+          chmod 600 ~/.ssh/id_ed25519
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_ed25519 deployer@92.112.180.154 "/var/www/lebrowski.blog/deploy.sh"
