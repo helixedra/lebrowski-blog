@@ -6,13 +6,26 @@ import Layout from "../layouts/Layout.astro";
   title="Lebrowski Blog"
   description="Personal blog about software development and life"
 >
-  <p>
-    This is my personal blog. Here I share various thoughts on software
-    development and my life.
-  </p>
-  <p>
-    The world is overflowing with generative garbage and short videos that cause
-    brain rot. This is a small, cozy, and old-school corner of the internet
-    where I share my thoughts without hype or clickbait.
-  </p>
+  <div class="flex flex-col items-center mt-8">
+    <p class="text-xl max-w-xl mx-auto py-4">
+      The internet is flooded with mindless generative content and short videos
+      that rot your brain.
+    </p>
+    <p class="text-xl max-w-xl mx-auto py-4">
+      This is a quiet, cozy, old-school corner where I share thoughtful
+      reflections on <b>software development</b> and <b>life</b>. No hype, no
+      clickbait — just authentic ideas.
+    </p>
+    <div
+      class="max-w-xl mx-auto p-6 border-4 border-double mt-6 border-zinc-500"
+    >
+      If you find my content interesting, consider <br />supporting me on:
+      <a
+        href="https://buymeacoffee.com/lebrowski"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:underline transition text-[#0000FF]">Buy Me a Coffee</a
+      >
+    </div>
+  </div>
 </Layout>
