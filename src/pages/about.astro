@@ -3,20 +3,29 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
-  title="About Me"
-  description="Lorem ipsum dolor sit amet"
-  pubDate={new Date("August 08 2021")}
-  heroImage="/blog-placeholder-about.jpg"
+  title="About Lebrowski Blog"
+  description="A quiet corner for thoughtful software development and life reflections—no hype, no clickbait, just real ideas. Escape the digital noise."
 >
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo
-    integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis
-    egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In
-    hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat.
-    Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu
-    non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim.
-    Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed
-    vulputate mi. Dictumst quisque sagittis purus sit amet.
-  </p>
+  <div class="flex flex-col items-center">
+    <p class="text-xl max-w-xl mx-auto py-4">
+      The internet is flooded with mindless generative content and short videos
+      that rot your brain.
+    </p>
+    <p class="text-xl max-w-xl mx-auto py-4">
+      This is a quiet, cozy, old-school corner where I share thoughtful
+      reflections on <b>software development</b> and <b>life</b>. No hype, no
+      clickbait — just authentic ideas.
+    </p>
+    <div
+      class="max-w-xl mx-auto p-6 border-4 border-double mt-6 border-zinc-500"
+    >
+      If you find my content interesting, consider <br />supporting me on:
+      <a
+        href="https://buymeacoffee.com/lebrowski"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:underline transition text-[#0000FF]">Buy Me a Coffee</a
+      >
+    </div>
+  </div>
 </Layout>

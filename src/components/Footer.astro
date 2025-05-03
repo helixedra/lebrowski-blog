@@ -5,7 +5,7 @@ import { RiTwitterXFill } from "react-icons/ri";
 ---
 
 <footer class="mt-auto">
-  <div class="flex justify-between">
+  <div class="flex justify-between p-8 text-sm text-zinc-500">
     &copy; {today.getFullYear()} Lebrowski.
     <div class="social-links flex gap-4">
       <a
@@ -13,10 +13,16 @@ import { RiTwitterXFill } from "react-icons/ri";
         target="_blank"
         rel="noopener noreferrer"
       >
-        <RiGithubFill size={24} />
+        <RiGithubFill
+          size={24}
+          className="opacity-50 hover:opacity-100 transition"
+        />
       </a>
       <a href="https://x.com/leqbro" target="_blank" rel="noopener noreferrer">
-        <RiTwitterXFill size={24} />
+        <RiTwitterXFill
+          size={24}
+          className="opacity-50 hover:opacity-100 transition"
+        />
       </a>
     </div>
   </div>

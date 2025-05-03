@@ -17,5 +17,18 @@ const { Content } = await render(post);
 ---
 
 <Layout {...post.data}>
+  <h1 class="mb-8 text-center">{post.data.title}</h1>
+  {
+    post.data.heroImage && (
+      <img
+        src={"/images/" + post.data.heroImage}
+        alt={post.data.title}
+        class="mb-8 w-full object-cover rounded"
+      />
+    )
+  }
   <Content />
+  <div class="text-sm text-zinc-500 mt-8">
+    {post.data.pubDate.toLocaleDateString()}
+  </div>
 </Layout>

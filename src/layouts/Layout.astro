@@ -11,9 +11,11 @@ import Footer from "../components/Footer.astro";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="mx-auto max-w-6xl px-4 py-8 min-h-screen flex flex-col">
+  <body
+    class="mx-auto max-w-4xl p-4 min-h-screen flex flex-col bg-white dark:bg-black dark:text-white"
+  >
     <Header />
-    <main class="h-full">
+    <main class="h-full p-8">
       <slot />
     </main>
     <Footer />
