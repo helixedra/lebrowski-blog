@@ -56,3 +56,25 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
   href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
   rel="stylesheet"
 />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css"
+/>
+<!-- head content -->
+
+<!-- Google tag (gtag.js) -->
+<script
+  data-category="analytics"
+  is:inline
+  type="text/partytown"
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-JF9NX3YERL"></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-JF9NX3YERL");
+</script>

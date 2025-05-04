@@ -21,6 +21,7 @@
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
     "remixicon": "^4.6.0",
-    "tailwindcss": "^4.1.5"
+    "tailwindcss": "^4.1.5",
+    "vanilla-cookieconsent": "^3.1.0"
   }
 }
