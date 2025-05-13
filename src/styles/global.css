@@ -3,11 +3,10 @@
 
 body {
   font-family: 'Work Sans', sans-serif;
-  font-size: 18px
 }
 
 p {
-  @apply text-lg leading-relaxed py-4;
+  @apply text-2xl leading-relaxed py-4;
 }
 
 h1 {

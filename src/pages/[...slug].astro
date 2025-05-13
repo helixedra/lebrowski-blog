@@ -26,8 +26,10 @@ const { Content } = await render(post);
         class="mb-8 w-full object-cover rounded"
       />
     )
-  }
+    }
+  <div>
   <Content />
+  </div>
   <div class="text-sm text-zinc-500 mt-8">
     {post.data.pubDate.toLocaleDateString()}
   </div>
