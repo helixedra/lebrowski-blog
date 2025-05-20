@@ -7,7 +7,7 @@ body {
 
 p {
   @apply text-2xl leading-relaxed py-4;
-}
+}  
 
 h1 {
   @apply text-6xl py-4 font-semibold;
